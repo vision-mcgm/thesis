@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Literature review}{3}
+\contentsline {section}{\numberline {2}Terms}{3}
+\contentsline {section}{\numberline {3}Static and dynamic faces are processed differently}{3}
+\contentsline {section}{\numberline {A}The UCL Vision Research Lab's expression space pipeline}{5}
+\contentsline {section}{\numberline {B}Source code}{7}
+\contentsline {section}{\numberline {C}Video files}{8}
+\contentsline {section}{\numberline {D}Jokes used to generate the smiles during filming}{9}
