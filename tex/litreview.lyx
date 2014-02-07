@@ -1,0 +1,282 @@
+#LyX file created by tex2lyx 2.0.6
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\paperfontsize default
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+Literature review
+\end_layout
+
+\begin_layout Section
+
+Terms
+\end_layout
+
+\begin_layout Section
+
+The overall goal
+\end_layout
+
+\begin_layout Section
+
+Modularity
+\end_layout
+
+\begin_layout Standard
+
+The property of modularity is the possibility to divide a system into multiple components!
+\end_layout
+
+\begin_layout Section
+
+Forms of neural coding
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{itemise}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\series bold
+Single neuron activation
+\series default
+. The firing of a single neuron can convey binary information. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\series bold
+Single spike frequency
+\series default
+ can code a real-valued quantity. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\series bold
+Spike frequency across multiple neurons
+\series default
+ can code relative information between two real-valued quantities. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\series bold
+Connection patterns
+\series default
+ between neurons (the existence of a connection, or its strength) can code complex information, but this information cannot be extracted without activating the neurons and monitoring the outputs. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{itemise}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Static and dynamic faces are processed differently
+\end_layout
+
+\begin_layout Standard
+
+The first evidence of a difference in the perception of expression between static and dynamic faces was found in 1991
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "humphreys1993expression"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+
+Identity vs. expression
+\end_layout
+
+\begin_layout Standard
+
+There is a substantial body of evidence that identity (information which is invariant within individuals) and expression (information which is invariant across perceived emotional states) are processed differently. On the high level, identity judgement and expression judgement have been observed to be doubly dissociated in prosopagnosics
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "archer1994movement"
+
+\end_inset
+
+. However, this observation may not allow us to generalise deductions to the normally-functional population, as prosopagnosics may have developed alternative recognition strategies such as non-holistic feature recognition (as is used to recognise classes of objects for which we do not possess a specialised representation or processing system).
+\end_layout
+
+\begin_layout Standard
+
+On a slightly lower level, judgement reaction times differ depending on whether expression or identity is being judged; when judging identity, familiar faces are matched faster, but familiarity confers no advantage when judging expression
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "bruce1986understanding"
+
+\end_inset
+
+. This could imply that the computation of identity is intrinsically more complex or that other neural actions such as memory retrieval of biographical data are triggered.
+\end_layout
+
+\begin_layout Standard
+
+On the lowest level, it is possible to find individual neurons which are receptive to either identity or expression
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "hasselmo1989role"
+
+\end_inset
+
+. Multidimensional scaling methods on their spike train data allow stimuli to be classified in either identity or expression space solely by neural response.
+\end_layout
+
+\begin_layout Standard
+
+However, the location in one test subject of a small number of individual neurons which correlate with a particular condition provides no information about the algorithmics of face processing; it simply demonstrates that the brain can judge identity and expression at some level (which is intuitively obvious) and that this information can be coded by neural activation as opposed to connection patterning or higher-level codes such as spike train phase.
+\end_layout
+
+\begin_layout Section
+
+Correlates between the two decouplings
+\end_layout
+
+\begin_layout Standard
+
+It is tempting to connect the identity-expression dichotomy with the static-dynamic dichotomy, as dynamic faces have constant identity but changing expression. This would be erroneous, as static faces can vary in both expression and identity.
+\end_layout
+
+\end_body
+\end_document
