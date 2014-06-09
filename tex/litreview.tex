@@ -54,7 +54,74 @@ These forms of compression can all be seen as transfer functions from low- to hi
 
 The process continues as we move further away from the retina and into the early visual system. Colour perception is another compression strategy, allowing any combination of wavelengths to be described by three coordinates in colour spaces like RGB, HSV or LAB.
 
-Compression is evident in Marr's 
+Compression is evident in Marr's theory of vision, as in \cite{marr1978representation}:
 
+"A representation is a formal system for making explicit certain entities or types of information, together with a specification of how the system does this. And I shall call the result of using a representation to describe a given entity a description of the entity in that representation."
 
+Provided that Marr's "result" contains less information than his "entities or types of information," representation is precisely a process of compression.
+
+Different types of representation record and miss different types of information. For example, neurons in V5 are sensitive to motion but not to colour; neurons in FFA are sensitive to faces but not houses. Many early visual centres are retinotopically mapped, keeping account of the position on the retina of a stimulus. This information, however, is not always useful: maintaining a map requires separate channels for each part of the visual field, even those which are not of interest.
+
+In a retinotopically-mapped representation, it is easy to compare objects in the same position by simply subtracting or Pearson-correlating the corresponding areas. However, if the same object is present in the top-left of map A and the bottom-right of map B, comparing the two maps will not detect object identity.
+
+In reality, object recognition is position-invariant: we are able to track an object as it moves around on the retina, and also to compare objects in different positions in the map. How position-invariant representations are built is a key problem in understanding the brain\cite{stringer2000position}.
+
+Position-invariance is an important quality of object percepts, but is it sufficient to say that something is perceived as an object? Object perception is often associated with two other properties: spatiotemporal extent, and a canonical coordinate frame.
+
+\paragraph{Spatiotemporal extent}
+Most objects have spatial extent: defined borders. Prominent work on segmentation\cite{kiper1996cortical,grossberg1987role,atkinson1992visual,riseman1977computational,li1999visual} and figure-ground separation\cite{kelly2000neural,grossberg1993figure,grossberg19943} (which is simply segmentation from the background) underlines how important this process is to vision. Segmentation is task-specific: although we \textit{can} segment this object:
+\begin{center}
+\includegraphics[width=0.3\textwidth]{img/maze.png}
+\end{center}
+
+we do not automatically perform that complex computation (and cannot without scanning the fovea over the image, as it is too detailed) unless engaged in a task which requires it, like copying the object.
+
+When reasoning about dynamic stimuli, some objects have temporal extent: they appear at a certain moment, then disappear. Temporal extent is often task-sensitive. For example, a changing traffic light can be seen either as three permanent ``light" objects which change colour, or as ``red-light", ``yellow-light" and ``green-light" objects which appear when they illuminate and disappear when they darken.
+
+\paragraph{Canonical coordinate frames}
+
+Translation is not the only transformation under which objects are invariant: they also preserve their identity under 2D or 3D rotation and scaling. Marr pointed out that many objects are more easily recognised from certain points of view and inferred that they possess principal axes\cite{marr1982vision}. This property allows different objects of the same class to be compared; their principal axes can be aligned, allowing features to be registered.
+
+In summary, objects are percepts which admit position invariance and have defined extent. However, all visual input is not segmented into objects. One of the main stimulus classes which we do not segment consists of textures.
+
+\subsection{Textures}
+
+There is much work on texture perception\cite{}, individuation\cite{} and classification\cite{}
+
+Textures differ from objects 
+
+\section{Representations}
+
+It is important to note that there is never a unique representation of a visual stimulus, and it makes no sense to speak of "the" representation of a face or a house. Representations of a scene include:
+
+Retinal photon trace (similar to a digital camera image)
+Optic nerve representation
+Neural recordings from V1
+Neural recordings from the FFA
+A verbal description of a scene
+A written description of the scene
+
+In terms of size, representations range from the very small (a recording from a single face-sensitive neuron can be taken to represent the presence or absence of a face in its receptive field) to the very large (such as Gallant's reconstruction of visual input from multivoxel MR imaging\cite{naselaris2009bayesian}).
+
+The Marrean view sees representations as processes. Like other processes, such as functions, they can be composed so that information flows through them sequentially. Visual information flows from the retina to a single face-sensitive neuron as follows:
+
+Retina - optic nerve - visual centres - FFA - neuron of interest
+
+\subsection{Levels}
+
+Representations can be seen to operate on different levels. We say that we move "up" from a low-level representation (the retina, or image space) to a high-level representation (FFA neurons, or face space). "Top-down control" indicates that cognitive representations accessible to consciousness are influencing low-level representations like motor neuron activity.
+
+This up-and-down metaphor is very imprecise, despite being very common in the literature (over 369,000 results for the search "top-down control vision" on the Google Scholar literature search engine). It can generally be interpreted in two ways.
+
+\paragraph{1. Top-bottom as distance from consciousness}
+This view sees representations as being organised according to their interaction with consciousness. Qualia, intentions and percepts are the most high-level representations, as they are consciously accessible. Early visual system representations are seen as lower-level as they can be hidden from consciousness by processes like masking, crowding and adaptation. We refer to this as the \textbf{awareness scale}.
+
+\paragraph{2. Top-bottom as representational information}
+This view sees representations as being organised according to their information content, or entropy. Consider our two alternative codes for the 1D positions of a moving point, R1:(1,2 3,4,...,99,100) and R2:(start=1, speed=1). Although they describe the same thing, R1 contains 50 times more information than R2 (100 numbers compared to 50). We refer to this as the \textbf{information scale}.
+
+These two metaphors describe completely different things, yet are mixed under the monikers "top-down" and "bottom-up." It is necessary to be very clear about which one we mean.
+
+\subsection{Operations on representations}
+
+Matching. Two representations can be compared for identity. This usually happens on two representations of equal information level
 

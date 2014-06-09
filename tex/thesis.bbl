@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{humphreys1993expression}
 G.W. Humphreys, N.~Donnelly, and M.J. Riddoch.
@@ -22,6 +22,79 @@ M.E. Hasselmo, E.T. Rolls, and G.C. Baylis.
 \newblock The role of expression and identity in the face-selective responses
   of neurons in the temporal visual cortex of the monkey.
 \newblock {\em Behavioural brain research}, 32(3):203--218, 1989.
+
+\bibitem{wolff1993computing}
+J~Gerard Wolff.
+\newblock Computing, cognition and information compression.
+\newblock {\em AI Communications}, 6(2):107--127, 1993.
+
+\bibitem{marr1978representation}
+David Marr and Herbert~Keith Nishihara.
+\newblock Representation and recognition of the spatial organization of
+  three-dimensional shapes.
+\newblock {\em Proceedings of the Royal Society of London. Series B. Biological
+  Sciences}, 200(1140):269--294, 1978.
+
+\bibitem{stringer2000position}
+Simon~M Stringer and Edmund~T Rolls.
+\newblock Position invariant recognition in the visual system with cluttered
+  environments.
+\newblock {\em Neural Networks}, 13(3):305--315, 2000.
+
+\bibitem{kiper1996cortical}
+Daniel~C Kiper, Karl~R Gegenfurtner, and J~Anthony Movshon.
+\newblock Cortical oscillatory responses do not affect visual segmentation.
+\newblock {\em Vision research}, 36(4):539--544, 1996.
+
+\bibitem{grossberg1987role}
+Stephen Grossberg and Ennio Mingolla.
+\newblock The role of illusory contours in visual segmentation.
+\newblock In {\em The perception of illusory contours}, pages 116--125.
+  Springer, 1987.
+
+\bibitem{atkinson1992visual}
+Janette Atkinson and Oliver Braddick.
+\newblock Visual segmentation of oriented textures by infants.
+\newblock {\em Behavioural Brain Research}, 49(1):123--131, 1992.
+
+\bibitem{riseman1977computational}
+Edward~M Riseman and Michael~A Arbib.
+\newblock Computational techniques in the visual segmentation of static scenes.
+\newblock {\em Computer Graphics and Image Processing}, 6(3):221--276, 1977.
+
+\bibitem{li1999visual}
+Zhaoping Li.
+\newblock Visual segmentation by contextual influences via intra-cortical
+  interactions in the primary visual cortex.
+\newblock {\em Network: computation in neural systems}, 10(2):187--212, 1999.
+
+\bibitem{kelly2000neural}
+Frank Kelly and Stephen Grossberg.
+\newblock Neural dynamics of 3-d surface perception: Figure-ground separation
+  and lightness perception.
+\newblock {\em Perception \& Psychophysics}, 62(8):1596--1618, 2000.
+
+\bibitem{grossberg1993figure}
+Stephen Grossberg.
+\newblock Figure-ground separation.
+\newblock {\em CAS/CNS Technical Report Series}, (062), 1993.
+
+\bibitem{grossberg19943}
+Stephen Grossberg.
+\newblock 3-d vision and figure-ground separation by visual cortex.
+\newblock {\em Perception \& psychophysics}, 55(1):48--121, 1994.
+
+\bibitem{marr1982vision}
+David Marr.
+\newblock Vision: A computational investigation into the human representation
+  and processing of visual information, henry holt and co.
+\newblock {\em Inc., New York, NY}, 1982.
+
+\bibitem{naselaris2009bayesian}
+Thomas Naselaris, Ryan~J Prenger, Kendrick~N Kay, Michael Oliver, and Jack~L
+  Gallant.
+\newblock Bayesian reconstruction of natural images from human brain activity.
+\newblock {\em Neuron}, 63(6):902--915, 2009.
 
 \bibitem{bowman2009fire}
 David~MJS Bowman, Jennifer~K Balch, Paulo Artaxo, William~J Bond, Jean~M
