@@ -13,14 +13,14 @@ Before presentation, stimuli were cropped to 564 by 641 pixels, removing the bac
 
 \begin{subfigure}[b]{\textwidth}
 \centering
-                \includegraphics[width=12cm]{img/frame00000.png}
+                \includegraphics[width=9cm]{img/frame00000-norm.png}
                 \caption{Stimuli in original 1024 by 768 resolution.}
           
         \end{subfigure}
 
 \begin{subfigure}[b]{\textwidth}
 \centering
-                \includegraphics[width=12cm]{img/frame00000.png}
+                \includegraphics[width=9cm]{img/frame00000-norm.png}
                 \caption{Stimuli cropped to 564 by 641 pixels, as presented to subjects.}
           
         \end{subfigure}
@@ -35,6 +35,19 @@ Experiments were coded in MATLAB using Psychtoolbox. Video was displayed by load
 Stimuli were displayed at 50 Hz on an INS monitor with a refresh rate of 100 Hz and a resolution of INS. The active video area subtended a visual angle of 14º; subjects used a chin-rest at a distance of 57 cm from the screen and were asked not to deviate their head angle from the vertical. Subjects were not requested to fixate, and the experiment took place in a darkened room.
 
 All monitors used during these experiments were identically calibrated using a Cambridge Research Systems ColorCal or ColorCal MKII.
+
+
+\section{Choice of subjects}
+
+So that we could study the fire perception of the general population, rather than that of trained vision scientists, we recruited from an email list operated by University College London. Most subjects were degree or Masters students aged between 20 and 25. There was an approximately equal gender balance.
+
+During each experiment, subjects were screened for accuracy during the training phase, which was very easy (average accuracy 80\% or higher). We followed the policy of rejecting subjects if they could not perform about 70\% during the training phase. However, this rarely occurred; only two subjects were rejected during the entire course of experiments described in this thesis.
+
+We therefore consider that our subjects form a representative sample of the general population.
+
+\section{Motivating subjects}
+
+
 
 
 \section{Experiment 1: \textbf{search-ratio}}
@@ -81,6 +94,7 @@ We used a total of 600 trials (40 trials per condition).
 
 We observed the following mean accuracies:
 
+
 \begin{center}
 \begin{tabular}{ r | l   }
 \textbf{Sample length} & \textbf{Mean accuracy}\\
@@ -88,6 +102,20 @@ We observed the following mean accuracies:
 10 frames (0.2 s) & 0.728\\
  25 frames (0.5 s)&  0.704\\
  50 frames (1 s)&  0.687\\
+\end{tabular}
+\end{center}
+
+Unfolding across sample lengths and ratios, accuracies are the following:
+
+\label{ex1:accs}
+\begin{center}
+\begin{tabular}{ r | c | c | c | c | c    }
+Sample length & ratio=1.2 & ratio=1.4 & ratio=1.6 & ratio=1.8 & ratio=2 \\
+\hline
+
+0.2 s & 0.766&  0.728&  0.767&  0.696&  0.682 \\
+0.5 s & 0.759&  0.731&  0.691& 0.681& 0.658\\
+1 s & 0.711& 0.714&  0.654&  0.709&  0.648\\
 \end{tabular}
 \end{center}
 
@@ -121,10 +149,16 @@ A two-factor repeated-measures ANOVA shows a highly significant effect of test/s
 
 It is therefore the ratio between test and sample which determines the difficulty of the task\footnote{We use difficulty here as a proxy for accuracy, not to indicate the perceived ``hardness" of the task, which we did not measure.}, not the absolute lengths of either the target or the test.
 
- 
+Subjects' mean accuracy peaks at about trial number 150, showing that this task is learnt quickly.
+
+Across subjects, there are large individual differences in accuracy. 
+
+Even at maximum accuracy, subjects only perform at 74\%: this is a relatively hard task, even with sub-1-second clips.
+
+This experiment only characterised samples between 10 anf 50 frames (0.2 and 1 seconds). To investigate subjects' performance on shorter clips and smaller amounts of image data, we conducted a similar experiment using samples between 1 and 12 frames (0.02 and 0.24 seconds).
 
 
-\begin{figure}[htp]
+\begin{figure}[H]
 \centering
 \renewcommand{\arraystretch}{1.8}
 
@@ -141,8 +175,9 @@ sample/test ratio (1.2 1.4 1.6 1.8 2).\\
 			Test length varied within blocks \newline
 			15 conditions \newline
 40 trials per condition \newline
-600 trials \newline
+480 trials \newline
 25 training trials \\
+Subjects & n \\
 \end{tabular}
 \caption{Design summary.}
    \end{subfigure}
@@ -162,7 +197,7 @@ sample/test ratio (1.2 1.4 1.6 1.8 2).\\
 \begin{subfigure}[b]{\textwidth}
 \centering
                 \includegraphics[width=12cm]{img/fig_fire3_correct_tL.pdf}
-                \caption{Accuracy against sample length. Longer samples are more easily matched.}
+                \caption{Accuracy against sample length. Longer samples are harder to match.}
           
         \end{subfigure}
 \begin{subfigure}[b]{\textwidth}
@@ -174,7 +209,7 @@ sample/test ratio (1.2 1.4 1.6 1.8 2).\\
 \caption{Experiment 1: the effects on accuracy of varying sample length, and test/sample ratio.}
 \end{figure}
 
-\begin{figure}[htp]
+\begin{figure}[htb]
 \centering
 \begin{subfigure}[b]{\textwidth}
 \centering
@@ -182,5 +217,5 @@ sample/test ratio (1.2 1.4 1.6 1.8 2).\\
                 \caption{Learning: accuracy vs. trial number, blocked into groups of 20.}
       		\label{f:e1:learn}
         \end{subfigure}
-\caption{Experiment 1: the effects on accuracy of varying sample length, and test/sample ratio. As throughout this document, error bars are 1 SEM.}
+\caption{Experiment 1: during approximately the first 150 trials, subjects learn to perform this task.}
 \end{figure}

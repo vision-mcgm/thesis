@@ -11,7 +11,9 @@
 
 \input{mylibrary}
 \usepackage{array}
+\usepackage{float}
 \usepackage[margin=1.5in]{geometry}
+\usepackage{amsmath}
 
 \begin{document}
 \maketitle
@@ -29,15 +31,20 @@ $n$ words as counted by  the TeXcount script at \texttt{http://app.uio.no/ifi/te
 \textit{Acknowledgements}\\
 ...
 
-\vspace{3cm}
 
-\textit{Please note}\\
-Throughout this document, error bars show one standard error of the mean.
 \end{center}
 
 
 \pagebreak
 
+\vspace{10cm}
+\begin{center}
+\textit{Please note}\\
+Throughout this document, error bars show one standard error of the mean.\\
+When discussing accuracy, we use both the $[0,1]$ interval and the $[0\%,100\%]$ interval. Thus a drop in accuracy of 0.03 is a drop of 3 percentage points.
+\end{center}
+
+\pagebreak
 
 \tableofcontents
 
@@ -47,10 +54,29 @@ Throughout this document, error bars show one standard error of the mean.
 
 \input{litreview}
 
-\input{part_modelling}
+
 
 \input{part_imageDomain}
 \input{part_fireExperiments}
+\input{part_experiment2_search-shortsamples}
+\input{part_experiment3-prepost}
+
+
+
+\input{part_edges}
+
+\input{part_experiment4_manipsPrototype}
+
+\input{part_experiment5_manips}
+
+\input{experimentn_faces}
+
+\input{experimentn-firefaces}
+
+
+\input{part_modelling}
+
+\input{part_discussion}
 
 \input{unsorted}
 

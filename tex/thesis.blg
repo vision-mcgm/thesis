@@ -4,46 +4,44 @@ The top-level auxiliary file: thesis.aux
 The style file: unsrt.bst
 Database file #1: references.bib
 Database file #2: bib_litreview.bib
-Warning--there's a number but no volume in grossberg1993figure
-You've used 19 entries,
+You've used 23 entries,
             1791 wiz_defined-function locations,
-            577 strings with 7025 characters,
-and the built_in function-call counts, 4586 in all, are:
-= -- 434
-> -- 183
-< -- 1
-+ -- 69
-- -- 50
-* -- 356
-:= -- 732
-add.period$ -- 58
-call.type$ -- 19
-change.case$ -- 19
+            602 strings with 7533 characters,
+and the built_in function-call counts, 5503 in all, are:
+= -- 520
+> -- 210
+< -- 4
++ -- 80
+- -- 57
+* -- 405
+:= -- 866
+add.period$ -- 70
+call.type$ -- 23
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 181
-empty$ -- 443
-format.name$ -- 50
-if$ -- 990
+cite$ -- 23
+duplicate$ -- 230
+empty$ -- 540
+format.name$ -- 57
+if$ -- 1204
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 19
-newline$ -- 98
-num.names$ -- 19
-pop$ -- 29
+int.to.str$ -- 23
+missing$ -- 24
+newline$ -- 118
+num.names$ -- 23
+pop$ -- 43
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 73
+skip$ -- 101
 stack$ -- 0
-substring$ -- 410
-swap$ -- 28
-text.length$ -- 1
+substring$ -- 470
+swap$ -- 44
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 52
-width$ -- 21
-write$ -- 210
-(There was 1 warning)
+warning$ -- 0
+while$ -- 62
+width$ -- 25
+write$ -- 254

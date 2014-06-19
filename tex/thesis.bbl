@@ -49,8 +49,8 @@ Daniel~C Kiper, Karl~R Gegenfurtner, and J~Anthony Movshon.
 \bibitem{grossberg1987role}
 Stephen Grossberg and Ennio Mingolla.
 \newblock The role of illusory contours in visual segmentation.
-\newblock In {\em The perception of illusory contours}, pages 116--125.
-  Springer, 1987.
+\newblock In {\em The perception of illusory contours}, volume~36, pages
+  116--125. Springer, 1987.
 
 \bibitem{atkinson1992visual}
 Janette Atkinson and Oliver Braddick.
@@ -77,7 +77,7 @@ Frank Kelly and Stephen Grossberg.
 \bibitem{grossberg1993figure}
 Stephen Grossberg.
 \newblock Figure-ground separation.
-\newblock {\em CAS/CNS Technical Report Series}, (062), 1993.
+\newblock {\em CAS/CNS Technical Report Series}, 1993.
 
 \bibitem{grossberg19943}
 Stephen Grossberg.
@@ -95,6 +95,28 @@ Thomas Naselaris, Ryan~J Prenger, Kendrick~N Kay, Michael Oliver, and Jack~L
   Gallant.
 \newblock Bayesian reconstruction of natural images from human brain activity.
 \newblock {\em Neuron}, 63(6):902--915, 2009.
+
+\bibitem{green1966signal}
+David~Marvin Green, John~A Swets, et~al.
+\newblock {\em Signal detection theory and psychophysics}, volume 1974.
+\newblock Wiley New York, 1966.
+
+\bibitem{flach2003geometry}
+Peter~A Flach.
+\newblock The geometry of roc space: understanding machine learning metrics
+  through roc isometrics.
+\newblock In {\em ICML}, pages 194--201, 2003.
+
+\bibitem{alter1998extracting}
+Tao~D Alter and Ronen Basri.
+\newblock Extracting salient curves from images: An analysis of the saliency
+  network.
+\newblock {\em International Journal of Computer Vision}, 27(1):51--69, 1998.
+
+\bibitem{edridge1945persistence}
+FW~Edridge-Green.
+\newblock Persistence of vision.
+\newblock {\em Nature}, 155:178, 1945.
 
 \bibitem{bowman2009fire}
 David~MJS Bowman, Jennifer~K Balch, Paulo Artaxo, William~J Bond, Jean~M
