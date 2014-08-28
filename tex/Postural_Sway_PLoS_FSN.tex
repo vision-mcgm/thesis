@@ -1,0 +1,452 @@
+% Template for PLoS
+% Version 1.0 January 2009
+%
+% To compile to pdf, run:
+% latex plos.template
+% bibtex plos.template
+% latex plos.template
+% latex plos.template
+% dvipdf plos.template
+
+\documentclass[11pt]{article}
+
+% amsmath package, useful for mathematical formulas
+\usepackage{amsmath}
+% amssymb package, useful for mathematical symbols
+\usepackage{amssymb}
+
+% graphicx package, useful for including eps and pdf graphics
+% include graphics with the command \includegraphics
+\usepackage{graphicx}
+
+% cite package, to clean up citations in the main text. Do not remove.
+\usepackage{cite}
+
+\usepackage{color} 
+
+% Use doublespacing - comment out for single spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{hyperref} % enable links
+\usepackage{soul}
+% These packages are all incorporated in the memoir class to one degree or another...
+
+% Text layout
+\topmargin 0.0cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+\textwidth 16cm 
+\textheight 21cm
+
+% Bold the 'Figure #' in the caption and separate it with a period
+% Captions will be left justified
+\usepackage[labelfont=bf,labelsep=period,justification=raggedright]{caption}
+
+% Use the PLoS provided bibtex style
+\bibliographystyle{plos2009}
+
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+
+% Leave date blank
+\date{}
+
+\pagestyle{myheadings}
+%% ** EDIT HERE **
+
+
+%% ** EDIT HERE **
+%% PLEASE INCLUDE ALL MACROS BELOW
+
+\usepackage{lineno} % for line numbers
+\usepackage{color, soul} % for highlighting
+
+\usepackage[bordercolor=white,backgroundcolor=gray!30,linecolor=black,colorinlistoftodos]{todonotes}
+\newcommand{\rework}[1]{\todo[color=yellow,inline]{#1}} % for highlighting that copes with citations!\rework
+
+%% END MACROS SECTION
+
+\begin{document}
+
+\setpagewiselinenumbers
+\modulolinenumbers[2]
+
+% Title must be 150 characters or less
+\begin{flushleft}
+{\Large
+\textbf{Chaos in balance: Non-linear measures of postural control predict individual variations in visual illusions of motion.}
+}
+% Insert Author names, affiliations and corresponding author email.
+\\
+Deborah Apthorp$^{1, 2, \ast}$, 
+Fintan Nagle$^{3}$
+Stephen Palmisano$^{2}$
+\\
+\bf{1} Research School of Psychology, College of Medicine, Biology \& Environment, Australian National University, ACT 0200, Australia
+\\
+\bf{2} School of Psychology, Faculty of Social Sciences, University of Wollongong, NSW 2522, Australia % Check if faculty name has changed
+\\
+\bf{3} School of Psychology, CoMPLEX and Institute of Cognitive Neuroscience, University College London, WC1H 0AP, UK % Fintan, is this affiliation correct??
+\\
+$\ast$ E-mail: deborah.apthorp@anu.edu.au
+\end{flushleft}
+
+\begin{linenumbers}
+\def\linenumberfont{\normalfont\small\sffamily}
+
+% Please keep the abstract between 250 and 300 words
+\section*{Abstract}
+Visually-induced illusions of self-motion (vection) can be compelling for some people, but there are large individual variations in the strength of these illusions. Do these variations depend, at least in part, on the extent to which people rely on vision to maintain their postural stability? Using a Bertec balance plate in a brightly-lit room, we measured excursions of the centre of foot pressure (CoP) over a 60-second period with eyes open and with eyes closed during quiet stance, for 13 participants. Subsequently, we collected vection strength ratings for large optic flow displays while seated, using both verbal ratings and online throttle measures. We also collected measures of postural sway (changes in anterior-posterior CoP) in response to the same visual motion stimuli while standing on the plate. The magnitude of standing sway in response to expanding optic flow (in comparison to blank fixation periods) was predictive of both verbal and throttle measures for seated vection. In addition, the ratio between eyes-open and eyes-closed CoP excursions during quiet stance (using the area of postural sway) significantly predicted seated vection for both measures. Interestingly, these relationships were weaker for contracting optic flow displays, though these produced both stronger vection and more sway. Next we used a non-linear analysis (recurrence quantification analysis, RQA) of the fluctuations in anterior-posterior position during quiet stance (both with eyes closed and eyes open); this was a much stronger predictor of seated vection for both expanding and contracting stimuli. Given the complex multisensory integration involved in postural control, our study adds to the growing evidence that non-linear measures may provide a more informative measure of postural sway than the conventional linear measures. 
+% Please keep the Author Summary between 150 and 200 words
+% Use first person. PLoS ONE authors please skip this step. 
+% Author Summary not valid for PLoS ONE submissions.   
+%\section*{Author Summary}\
+
+\section*{Introduction}
+The sensation of self-motion induced by large-field visual stimuli (known as `vection'; \cite{Lishman:1973ck,Berthoz:1975hm}) can be quite compelling, yet there are large individual variations in the experience of this phenomenon. %[is there a ref for this?].
+Since these variations might have significant real-world implications (e.g. susceptibility to motion sickness, accuracy in virtual driving/aviation environments, etc.), it would be useful to have some insight into the underlying causes. One possible predictor is visual control of posture: that is, the extent to which people rely on visual cues to maintain steady upright posture. While much study has examined postural control in the areas of ageing \cite{Ramdani:2013da, Jeka:2006fb}, balance-related disorders such as Parkinson's Disease \cite{Mitchell:1995vx,Schmit:2006bc}, and, in some cases, multisensory integration \cite{Maurer:2006ju, Peterka:2002vf, Peterka:2004ir}, few studies have examined its role in self-motion perception.
+
+\subsection*{Effects of optic flow on posture}
+
+Several groups have examined the effect of visual scene motion on postural readjustment \cite{Masson:1995eb, Lestienne:1977wn, Palmisano:2009uc}; the relationship is not straightforward, and most models assume some kind of continuous, non-linear multisensory feedback system  (e.g. see \cite{Creath:2005ey,Maurer:2005dy}). A recent paper examined the role of perceptual uncertainty in visual flow fields \cite{Wei:2010df}, concluding that near-optimal sensory weighting under a simple Bayesian model \cite{Alais:2004wt,Ernst:2002cc} was sufficient to explain the results. However, although somewhat misleadingly including the word ``vection" in the title, the authors did not actually measure vection itself. 
+
+The relationship between visually-induced postural sway and vection has been less well examined; Tanahashi et. al. \cite{Tanahashi:2007hf} suggested that both phenomena might be underpinned by the same basic mechanisms. They found that subjects exhibited greater postural disturbances when vection was experienced during visually simulated roll motion (indicated by a button-press), compared to no vection. Postural disturbances were still evident to the stimuli when vection was not experienced, but these were smaller, and the authors suggest that the two phenomena might merely have different thresholds.  
+
+Guerraz and Bronstein \cite{Guerraz:2008vo} explored this notion further by utilising stimuli that could evoke postural responses in either the same or opposite direction to the simulated visual motion, and exploring both the vection and postural responses to these stimuli. In this study, a horizontally translating background checkerboard pattern was presented behind either a ground-fixed or head-fixed frame. With the ground-fixed frame, postural responses were (transiently) in the opposite direction to the background motion, while with the head-fixed frame, postural responses were only in the same direction as background motion. However, vection was only ever in one direction (opposite to the background motion, in the same direction as the simulated self-motion, as it almost always is). The ground-fixed frame provided motion parallax, which should lead to better vection, while the head-fixed frame provided no motion perspective, and so should lead to weaker vection. Consistent with this, in the head-fixed (compared to the ground-fixed) condition, vection developed considerably later, was reported less consistently, and was of shorter duration. The authors postulate two mechanisms, a shorter-latency system responsible for automatic postural adjustments, and a longer-latency system involved in postural adjustment in response to the conscious perception of self-motion. 
+
+However, neither of these studies examined vection magnitude or duration; the relationship between vection magnitude and sway magnitude might shed some light on the relationship between these mechanisms.
+ 
+
+\subsection*{Effects of optic flow on motion sickness}
+Smart and Stoffragen \cite{SmartJr:2002ef} showed that visually induced motion sickness (when the environment, a moving room, oscillates at frequencies around 0.017 to 0.4 Hz, thought to interfere with the waveforms of normal postural sway) was preceded by, and predicted by, the variance in individual postural sway. In short, individuals who showed greater postural sway while exposed to the swaying room were more likely to experience motion sickness. They were also more likely to have more frequent and longer sessions of vection, but the paper does not dwell on this relationship. Another underplayed aspect of this study is that people who showed greater instability when sway was measured with eyes closed (thus in the absence of visual stimulation) were more likely to become sick. Were they also more likely to experience vection? Although the data would speak to this, the relationship is not explored at all. The authors cite another paper \cite{Kuno:1999vh} where the relationship between vection and postural sway was explored. But this paper only explores the correlation between self-reported vection and magnitude of postural sway; it does not explore whether those who show greater postural variation in the first place are more prone to experiencing vection. This is a useful question which is yet to be fully explored. % Might need to expand on the point about the head tracker here - SP. 
+
+\subsection*{Postural control and vection}
+Palmisano et al. \cite{Palmisano:2009uc} measured the effect of jittering and non-jittering radially expanding and contracting optic flow on postural sway and on vection (in separate experiments for sway and vection). The horizontal and vertical simulated viewpoint jitter added to these radial flow displays was similar to camera shake. These results showed that jitter (in comparison to smooth motion) increased backwards sway in response to expanding flow, but \textbf{decreased} forwards sway in response to contracting flow; however, jitter increased \textbf{vection} in both directions. The authors measured both anterior-posterior (AP) and medial-lateral (ML) sway, but only AP sway showed the effects. A postural sway aftereffect was also seen in both directions. Variability was not reported, nor was sway with eyes closed. % Other papers here? Is this all there is? 
+
+More recently, Palmisano et al. \cite{Palmisano:2014ez} found that a measure of spontaneous standing sway (specifically, the Romberg Ratio, which measures path length of eyes-closed standing sway divided by eyes-open path) significantly predicted the vection experienced while standing in front of a large-field vection-inducing display. However, this measure only predicted vection for smooth radial flow displays, not for (vertically) oscillating radial flow displays (which produced stronger vection). Continuous monitoring of vection strength while standing can be problematic; any measure which requires manual activity, such as a button-press, can disrupt postural responses and thus also activity on the retina; thus, only verbal measures were used in this study, collected after each optic flow period. It is still a question of interest whether measures of visual control of posture can predict seated vection, where the vestibular input (given by the necessity to remain upright while viewing vection-inducing stimuli), as well as other proprioceptive inputs, would be less salient, and thus visual influences on self-motion perception might be greater. 
+
+
+\subsection*{Measures of postural fluctuations}
+
+Postural fluctuations can be measured using a variety of different techniques, some more straightforward than others. Below we briefly outline some of the more common measures, and their advantages and disadvantages. 
+
+\subsubsection*{Linear measures}  %Might need something a bit more general here.  e.g. Linear measures assume the output of the system is directly proportional to the input.
+The simplest of the linear measures used is path length. This involves computing the distance covered by the CoP over a certain time period, using the following equation: 
+\begin{equation}\label{eq:1}
+PL = \sum_{n-1}^{N} \sqrt{[x(n) - x(n-1)]^2+[y(n) - y(n-1)]^2}
+\end{equation}
+where $x$ represents the x position of the CoP and $y$ represents the y position, and $n$ is the number of data points \cite{Kim:2009dz}. This is one of the more common measures used, perhaps owing to its simplicity, and the authors have used a variant of this measure (the ratio between eyes-open and eyes-closed paths, as described above) to successfully predict standing vection \cite{Palmisano:2014ez}. 
+
+Sway area is also commonly used, usually computed as a 95\% confidence ellipse around the area covered by the CoP, computed using the eigenvalues of the variance/covariance matrix (\cite{Oliveira:1996ho,Zbilut:1992cz}; see Methods for details).  % More details here & refs
+
+Other linear measures include velocity, standard deviation, root mean square variability, and sway magnitude (anterior-posterior range).  For a more complete review of some of these techniques, see \cite{Duarte:2010gu}. However, some authors have suggested that fractal-dimension or non-linear measures provide more reliable descriptors of postural variations \cite{Doyle:2005fp}. 
+
+\subsubsection*{Non-linear measures}
+
+Recently, a growing body of literature has addressed the notion that, since postural stability is achieved via the interaction of a number of different systems, both within and between senses (for instance, visual and vestibular - \cite{Kiemel:2002gk, vanderKooij:2011jm}), the resulting measurements may be inherently nonlinear, and thus might be best investigated via analyses based on nonlinear dynamical approaches \cite{Kirchner:2012bd, Duarte:2000vh}. Approaches to this include (but are not limited to) recurrence quantification analysis \cite{Riley:2003vh, Donner:2010je, Ramdani:2013da}, wavelets \cite{Chagdes:2009dl} and detrended fluctuation analysis \cite{Kantelhardt:2001dr,Kantelhardt:2002cc}.
+
+Arguably the simplest of these methods is recurrence quantification analysis (RQA). This method was developed to quantify the number and duration of recurrences in a dynamical system, based on its phase space trajectory \cite{Zbilut:1992cz, Marwan:2007km}; it has been used in applications as diverse as economics, astrophysics, engineering, geophysics, physiology (in particular for heart rate variability), as well as in neuroscience (in particular for EEG data) \cite{Becker:2010iy, Hamadene:2005br, Huang:2006eq, Mesin:2013in, Talebi:2010gp, Zhu:2008bn}. Recently it has emerged as one of the more popular methods of quantifying recurrent fluctuations in postural sway during quiet standing \cite{Riley:2003vh, Ramdani:2013da,Tallon:2013vq}. One of its advantages is that is robust to non-stationarity of data, which tends to be an intrinsic property of postural fluctuations. Non-stationarity refers to the presence of extremely long-range correlations and/or drift in the time series data \cite{Duarte:2000vh}. % find more refs here. Also probably need to explain non-stationarity for non-physicists. 
+
+The basic principle behind RQA is that the phase space of a single time series can be reconstructed using time delay embedding: 
+\begin{equation}\label{eq:2}
+\vec{x}(i) = u(i), u(i+\tau), \dotsc, u(i+\tau (m - 1))
+\end{equation}
+where $u(i)$ represents the time series (such as, in this case, movement along the anterior-posterior axis over time), $m$ represents the embedding dimension and $\tau$ the time delay. It should be pointed out that the analysis is quite sensitive to each of these parameters, and care must be taken in selecting them \cite{Marwan:2011tf, Hasson:2008ww}. 
+
+% Maybe have a figure here similar to one of those nice ones with the Lorenz model? Is there an open source one? 
+
+RQA produces a number of measures of the complexity of a system, the simplest of which is recurrence rate:
+
+\begin{equation}\label{eq:3}
+RR = \frac{1}{N^2} \sum_{i, j=1}^{N} R(i,j)
+\end{equation}
+
+This represents the probability that any state will recur, and is represented by the density of points in the recurrence plot. Also available from the analysis are percent determinism (DET), laminarity (LAM), average line length (L), trapping time (\textit{TT}), Shannon entropy (ENTR) and trend. However, for the purposes of simplicity in this paper we intend to focus on recurrence rate. 
+
+% Other measures will be available in the data repository on Figshare? 
+
+% Do I need to give more explanation here? Fintan, you might be able to help here with a good lay-person's analysis? 
+
+
+\section*{Results}
+ 
+\subsection*{Sway path during quiet stance and seated vection}
+During quiet stance, almost all subjects exhibited greater postural sway with eyes closed than with eyes open. Initially, total sway path was calculated as the total distance travelled by the CoP over a 60-second period, using Equation \ref{eq:1}.
+
+ Data were sampled at 1000 Hz and smoothed with a low-pass order 5 Butterworth filter to remove unwanted high-frequency artefacts. See Figure \ref{Figure_1} for example data for a representative subject. 
+
+During seated vection, subjects gave quite variable vection ratings to contracting and expanding stimuli. Ratings were collected both via verbal reports (a percentage rating), and continuous monitoring with a throttle device (see Methods for details). The throttle data yielded both maximum measure (throttle max), and latency (number of seconds until the throttle rating reached a cutoff of 5 \%). Means and standard deviations of these ratings are shown in Table \ref{Table_0}. Verbal vection measures were significantly higher for contracting than expanding flow (t(12) = 3.54, p = 0.004), but this difference was not significant for throttle maximum (p = 0.069) or latency measures (p = .502). We computed the Romberg Ratio for sway path (closed path/open path) for each individual. However, the Romberg Ratio did not show a significant relationship with any of the seated vection measures, unlike the relationship shown with standing vection in our previous study \cite{Palmisano:2014ez}.
+
+% maybe leave this section out altogether? 
+
+\subsection*{Sway area ratios during quiet stance and seated vection}
+
+Next, we computed the 95\% confidence ellipse for sway area, as shown in Figure \ref{Ellipses}. This calculation was performed using Principal Components Analysis (PCA) to extract the eigenvectors and eigenvalues of the covariance matrix for the CoP values \cite{Oliveira:1996uk}, using Matlab code written by Marcos Duarte, a Python version of which is freely available at \href{http://demotu.github.io/posts/prediction-ellipse-ellipsoid.html}{http://demotu.github.io/posts/prediction-ellipse-ellipsoid.html}. We then investigated whether the ratio of sway area with eyes open and sway area with eyes closed could predict the verbally and manually rated strength of seated vection. This relationship was significant for expanding flow (see Figure \ref{Area_Ratios}), for the verbal and throttle maximum measures, but not for contracting flow; latency was not significant for either expanding or contracting flow. (For statistics, see Table \ref{Table_1}). This result provides some support for our earlier finding that the Romberg Ratio could predict standing vection, at least for smoothly moving stimuli, in another adult sample \cite{Palmisano:2014ez}. 
+
+% NB The link no longer works for the Matlab code - not sure where it has gone, have written to Duarte to request a new link or to put it on my Figshare account. 
+
+\subsection*{Visually-evoked postural responses and seated vection}
+The postural responses of individuals to expanding and contracting optic flow have been shown to be related to, but not directly predictive of, the vection experience during stimulus exposure \cite{Palmisano:2009uc,Tanahashi:2007hf, Guerraz:2008vo}. Here we asked a different question: could the magnitude of postural response to these kinds of stimuli predict the magnitude of vection an individual would experience in a separate, seated session? For each expanding and contracting radial flow session, we computed the average anterior-posterior (AP) position during motion stimulus exposure, and compared it to the baseline period immediately before each motion period (to control for long-term postural drift). Mean backward sway during expanding motion was not significantly different to 0 (1.16 mm; SD = 2.7 mm), probably reflecting the fact that, on average, participants tended to correct their initial backward sway, but these corrections were quite variable. Forward sway during contracting motion was substantially larger (8.94 mm; SD = 4.6 mm), and this difference was significant, t(12) = 5.81, p $<$ .001. This is consistent with previous research showing much larger magnitudes for contracting flow, probably due to foot physiology \cite{Palmisano:2009uc}; simply, it is possible to sway much further forward than backward before falling over. 
+
+
+However, we were chiefly interested in whether these measures could predict subsequent seated vection, and indeed they showed a significant relationship with expanding vection for verbal and throttle maximum measures, and for latency during contracting vection (see Figure \ref{VEPRs}). Contracting sway means did generally not prove to be very robust predictors of vection during contracting sway. These relationships also point to a probably more complicated, perhaps non-linear relationship between sway magnitudes and vection. Thus it seems reasonable to explore non-linear measures, both of quiet stance and of sway during optic flow exposure, in further detail. 
+
+% I haven't done the analysis of RQA during optic flow yet. I thought it might be interesting to look at a sort of sliding-window approach. In particular, Riley et al. (1999) state that "Ratio (%DET/%RECUR) maybe be useful in detecting changes in physiological state [16]. During changes in states, % RECUR usually decreases while %DET usually changes very little. This quantity is more useful to this end if RQA is performed using a moving window (over repeated epochs of data windows)." 
+%The toolbox I've been using is very unwieldy for this purpose, and also doesn't seem to be online any more, but I've just been exploring the CRP Toolbox (http://tocsy.pik-potsdam.de/CRPtoolbox/) which seems a lot more flexible and quicker. However, I'm still fiddling with the input parameters to try to work out the best ones. There are a lot of papers on this and they are pretty confusing. I'm mainly working on getting RQA plots that look a bit like those in the published papers, which I know is not really optimal. In the analysis below, I used similar parameters to the Riley paper mentioned above. 
+
+
+\subsection*{Recurrence analysis of CoP during quiet stance and seated vection}
+Although we found reasonable predictions for both independent linear measures for seated vection during expanding optic flow, we were puzzled by the lack of any reliable prediction for contracting flow.  As reported above, verbal vection measures were significantly higher for contracting than expanding flow, although not for throttle maximum or latency. Interestingly, in our previous study, we also found that linear measures of postural sway (Romberg ratios) were only able to predict the less-compelling vection induced by smooth optic flow (compared to jittering flow). Could it be that sway measures are only informative in the case of weaker vection? Or is it possible that there are more complex interactions involved in the relationship between postural control and the experience of vection which are not well captured by linear measures? 
+
+Given that many other researchers have begun to use nonlinear dynamic approaches to postural sway in such diverse fields as ageing, sport and athletics, diabetes and Parkinson's Disease \cite{Donner:2010je, Marwan:2011tf, Ramdani:2013da, Riley:2003vh, Schmit:2006bc, Schmit:2005cw}, we wondered if a nonlinear approach, giving closer insight into the recurrent patterns in postural control, might give us more insight into the relationship between postural control and vection. We chose recurrence analysis because of its relative simplicity and widespread use throughout the literature. % might need better justification here.. 
+
+Recurrence quantification analysis aims to uncover meaningful structure in postural fluctuations by exploring the recurrent patterns in the time series data produced by quiet standing CoP data. For a detailed explanation of the underlying theory, see \cite{Riley:1999ug} and \cite{Hasson:2008ww}. A graphical illustration of the concept is provided in Figure \ref{RP_illustration}. The parameters used in our analysis were similar to those used in \cite{Riley:1999ug}, since our methods (e.g. time period, eyes open and closed conditions) were very similar; we used an embedding dimension of 8, a delay ($\tau$) of 15, a radius of 30 and a line minimum of 4. Prior to analysis, the raw data was smoothed by averaging across 10 data points, removing high-frequency noise and rendering the time series more tractable for analysis. 
+
+Examples of recurrence plots for the anterior-posterior sway time series from two individuals are shown in Figure \ref{RQA_Plots}. Eyes-open plots are shown on the left; the individual in the upper part of the figure (Figure \ref{RQA_Plots}a and b) experienced strong vection, while the individual in the lower part (Figure \ref{RQA_Plots}c and d) experienced weak vection. Essentially, the individual who experienced strong vection displayed a higher percentage of recurrence in the postural sway time series with the eyes closed compared to open; the reverse was true for the weak-vection individual. This pattern persisted across the entire group, for both expanding and contracting vection, as shown in Figure \ref{Recurrence_Correlations}. Interestingly, the eyes-open data alone predicted seated vection quite robustly (correlations are reported in full in Table \ref{Table_2}. This suggests that  individuals who experience stronger vection show fewer recurrences in their patterns of postural sway when standing with their eyes open (i.e. experiencing visual feedback on their postural stability). The implications of this will be examined further in the Discussion.
+
+Other measures from the RQA analysis, such as percent of determinism and laminarity, were also significantly correlated with the vection measures. These relationships are outlined in full in the Supplementary Data available on Figshare (link). 
+
+%\subsection*{Recurrence analysis of CoP during optic flow and seated vection}
+%
+%% NB I may leave this section out. 
+%
+%Next we chose to examine the period of postural control when subject were exposed to expanding or contracting optic flow (visually-evoked postural responses or VEPRs). These have not previously been analysed using RQA, and thus we chose to employ a novel method suggested by Riley\cite{Riley:1999ug}, using a sliding window over repeated epochs of data windows. Riley suggests that this method may be useful to uncover physiological state changes, as when these change, recurrences usually decrease while determinism changes very little. This method has also been used in examining EEG data \cite{Schinkel:2009ex}. We took the raw anterior-posterior (AP) time series data from each optic flow session (expanding and contracting) for each participant, and averaged the data across 10 data points, as before. Then we performed a sliding-window RQA analysis using the CRP toolbox (available at \href{http://tocsy.pik-potsdam.de/crp.php}{http://tocsy.pik-potsdam.de/crp.php}). We did this analysis specifically on the periods around what we assumed would be transitions - the periods 10 seconds before and 10 seconds after the onset of the optic flow stimuli for each of the three trials for each stimulus type (expanding and contracting). For this analysis, we used a sliding window of 200 data points (equivalent to 2 seconds), which moved in steps of 20 points. Because of this shorter time series, we used different parameters to the analysis above; we used an embedding dimension of 3, a time delay ($\tau$) of 4, and a Euclidian mean threshold with a cutoff of .3. Full MATLAB code for this analysis is available at [ref], for the interested reader. Representative recurrence plots from this analysis are shown in Figure \ref{RPs_Contracting}
+%
+%For the analysis, we then divided percent determinism by percent recurrence for each time window, resulting in 92 data points for each 20-second epoch (see Figure \ref{RPs_Expanding}). For statistical analysis, we took the mean of the first 20 data points to represent the initial state, and the 41st to 60th data points to represent the transition state. If individuals more susceptible to vection also experience stronger transitions in physiological state when exposed to optic flow, we should expect to see a higher ratio of determinism to recurrence in these individuals during transitions compared to before the onset of optic flow. 
+%
+%% This seems to make sense, right? Unfortunately the numbers aren't really stacking up yet - maybe I don't have the right parameters? 
+
+
+\section*{Discussion}
+
+
+% SP: So you look at postural responses during quiet stance and during vection as predictors of vection strength and time course (both at time 1 when standing and at time 2 when seated).  Ideally we want postural predictors that can significantly predict vection at both time 1 and 2 (for both expanding and contracting flow).
+
+% DMA: Yes, but I find it very hard to get anything that predicts standing vection. I think it just isn't variable enough, and/or it is compromised by the sway itself in too complicated a way to be tractable for our analyses. 
+
+We set out to explore the role of visual control of posture in determining individual variations in the experience of vection. Overall, we found the three out of four of our measures of postural control while standing predicted individual variations in the experience of seated vection. Importantly, all of these measures were concerned with the influence of \textit{vision} on postural control - none of the eyes-closed measures alone predicted vection. However, we do not suggest that vision alone is the arbiter of the vection experience - rather, it is the complex interaction between the visual system and other systems governing postural control, such as vestibular and proprioceptive systems, that is at work here, and our proxy for investigating these interactions was variation in the CoP during both quiet stance and visual optic flow. 
+
+% SAP: Might want to mention the vestibular and multisensory brain areas which appear to be selectively activated by presenting egomotion consistent optic flow to stationary observers (only a few of these brain imaging studies checked for and/or induced vection though).
+
+Brain imaging studies have implicated a number of visual cortical areas in self-motion processing, including the medial temporal area (MT/V5) \cite{Tootell:1995uc}, the medial superior temporal area (MST) \cite{Morrone:2000ht} and its dorsal subdivision (MSTd) \cite{Liu:2009br}, the dorsomedial area (V6) \cite{Cardin:2011id, Pitzalis:2010he}, the cingulate sulcus visual area (CSv) \cite{Wall:2008fw}, and the ventral intraparietal area (VIP) \cite{Pitzalis:2013bp}. However, vestibular and multisensory areas of the cortex have also been implicated, including the intraparietal sulcus motion area (IPSmot) \cite{Pitzalis:2013bp}, the parieto-insular vestibular cortex (PIVC) \cite{Chen:2010du} and putative area 2v (p2v) \cite{Cardin:2010bu}, as well as the precuneus motion area (PcM) \cite{Smith:2011ih}. Although only a handful of these studies have explicitly measured vection, it seems likely that a network of brain areas are involved in self-motion perception, and this network almost certainly involves feedback, which may point to complex non-linear interactions between these brain areas. 
+
+Interestingly, the non-linear measures proved more predictive of subsequently experienced seated vection than the linear measures, particularly with regard to quiet standing; this is in line with previous research suggesting fractal measures of quiet stance are more reliable \cite{Doyle:2005fp}. Another interesting aspect of this data is that the eyes-open measures alone predicted vection strongly (see \ref{Table_2}); this was not the case for sway area or path length, perhaps because these linear measures incorporate absolute sway magnitude, which can vary with individual attributes such as height, weight and foot width, which are unlikely to be related to the tendency to experience vection. Non-linear measures are more related to the underlying structure of the data than to global variations \cite{Marwan:2007km, Riley:1999ug, Duarte:2000vh, Doyle:2005fp}. This also suggests that the assumptions underlying linear measures of postural control may be flawed, perhaps undermining their robustness as predictors. 
+
+% Might need a more specific reference for the above assertion??
+
+Much of the literature on recurrence analyses of postural sway, in both adults and children, has been concerned with the effects of injury, disease or ageing (many refs here). Older adults in particular show a pattern of fewer recurrences during quiet stance \cite{Tallon:2013vq}, and this has also been shown to predict falls in older adults \cite{Ramdani:2013da}. However, our sample was uniformly young and healthy (mean age = 20.9, SD = .76, range = 20-22, no reported injures, disabilities or vestibular issues). To our knowledge, this is the first report of recurrence measures reliably predicting a behavioural measure in such a sample. It is worth noting that, for a broader age range, age should be controlled for in this relationship. 
+
+We found stronger vection overall for contracting than for expanding optic flow, at least for the verbal measures, and also greater sway magnitude (both for mean anterior-posterior sway and for path length during optic flow in comparison to fixation). However, the linear measures we used (Romberg ratio, sway area ratio and VEPRs) all failed to predict individual variations in the magnitude of vection in response to contracting stimuli. It seems unlikely that this was due to ceiling effects in the data, as the maximum average verbal vection report in this condition was 93\%. The nonlinear measures alone provided reliable predictions of contracting vection strength; their predictions for expanding vection were also considerably stronger than most of the linear measures. 
+
+It is possible that the asymmetry between predictions for expanding and contracting vection could arise because multisensory processing during expanding and contracting optic flow differs; the postural adjustments for the two different types of real-world situations (for instance, falling forwards compared to falling backwards) may rest on different sensory weightings and different levels of feedback between sensory systems. If falling backwards (as might be induced by contracting flow) requires faster adjustments, this system may rely more heavily on non-linear feedback systems, which are not easily quantified by linear measures. % How's my reasoning here? 
+
+Overall, it is clear that non-linear dynamical analysis (RQA) of postural sway during quiet stance  can provide useful predictions about an individual's likelihood of experiencing illusions of self-motion. This could prove a useful tool for evaluating individuals before participation in virtual reality experiments, flight simulation training, and so on. In future, it would be fascinating to explore the possibility of classifying individual EEG data during vection compared to no-vection states, to explore whether RQA could be equally useful in examining neural state changes related to vection. % Should I flag this? Maybe not, might get scooped... but we are already collecting data... 
+
+
+% You may title this section "Methods" or "Madness". 
+% "Madness" is not a valid title for PLoS ONE authors. However, PLoS ONE
+% authors may use "Analysis".
+
+\section*{Materials and Methods}
+
+\subsection*{Participants}
+Participants were 13 third-year undergraduate students who volunteered as part of a course assignment. All gave informed consent and were free to withdraw from the study at any time if they experienced discomfort or motion sickness. The study was approved by the Wollongong University Human Ethics Committee and conformed to the guidelines set out in the Declaration of Helsinki. 
+
+\subsection*{Apparatus}
+Postural sway data was measured with a Bertec Balance Plate, using Bertec Acquire 4 software (Version 4.0.11.312) connected to a Dell Optiplex GX620 computer, running Windows XP. The data were sampled at 1000 Hz and recorded in a Matlab file. During the quiet stance and standing vection conditions, the plate was positioned 65 cm from the screen. During the seated vection conditions, subjects viewed stimuli through black-lined viewing tube fronted by a rectangular black cardboard frame, to give a field of view of 44 degrees horizontally and 26 degrees vertically, and were seated on a raised chair in front of the tube. The viewer was positioned 153 cm from the screen, with his or her face aligned with the back of the viewing tube.  During these conditions, as well as giving verbal ratings at the end of each vection trial, participants rated the strength of vection using a USB throttle device (CH Pro USB throttle), which sampled its position at a rate of 100 Hz. 
+
+%SP: Think you have the install disks and manual with you, but can check the installed version on the pc if you want.
+
+\subsection*{Stimuli}
+Stimuli were generated and displayed separately using Matlab version R2009b, running on a Mac Pro computer (Mac Pro 3.1, Quad-Core Intel Xeon 2.8 GHz) and the Psychophysics Toolbox \cite{Brainard:1997we, Pelli:1997uf}, and displayed using a Mitsubishi Electric colour data projector (Model XD400U) back-projected onto large (1.48 m wide by 1.20 m high) screen mounted on the lab wall. Stimuli were random clouds consisting of 1000 blue circular dots, moving in a radially expanding or contracting fashion (see Demo Movies 1 and 2), within a virtual  ``world'', 30 by 30 by 80 m in virtual units. The dot cloud moved at a simulated self-motion speed of 6 m/s, and either expanded towards or contracted away from the observer in separate sessions (see Procedure). 
+
+\subsection*{Procedure}
+
+Before the main experiment, participants filled in some basic demographic information and completed the first part of Kennedy's Simulator Sickness Questionnaire \cite{Kennedy:2009dt}. After this, a few basic physiological measures (height, weight, foot length, foot width) were taken. Then participants were asked to stand on the balance plate with their ankles aligned with the plate markings, with their feet together. Foot position on the plate was marked with erasable marker to ensure position was maintained if participants needed to step off the plate between sessions. They were instructed to stand with hands folded in front of them and gaze straight ahead. Then participants were instructed to stand as still as possible with eyes either closed or open (this was counterbalanced to eliminate order effects) while their CoP movement was recorded for 60 seconds.
+
+
+After a break, participants returned to the balance plate, standing in the same position as in the quiet stance trials, delineated by the markings on the plate. The observer was now 65 cm from the screen, giving a field of view of 66 by 62 degrees of visual angle, and the stimuli were adjusted accordingly. There were two sessions, again with expanding and contracting stimuli blocked. Each session consisted of a 30 s blank period, followed by 30 of the optic flow stimulus, 30 seconds of a blank screen, and 30 seconds of a simple fixation screen with instructions to continue standing steady; this sequence was repeated three times, and postural sway was again recorded for the entire session as outlined above. Participants also gave verbal vection ratings after each vection stimulus, as in the seated conditions.  % Might not mention the verbal ratings here if we're not going to analyse them??
+
+Following this, the seated vection conditions were run. Participants were seated on a high chair, with feet resting on a metal ring at the base of the chair, and head just inside the viewing tube as described above. After being given a basic description of vection, participants were asked to move the throttle forwards during the vection display, if and when they felt that they were moving, to rate the extent to which they felt they were moving (and specifically not the speed of their self-motion), and to move it back if they felt they were moving less or had stopped moving; the device had tactile marking points (small raised bumps at 0, 50 and 100 \% positions), to assist participants in rating vection strength. The computer was programmed to require the throttle to be reset to 0 before the next trial could proceed. After each trial, participants were also asked to also give a verbal rating of their vection experience, from 0 (no self-motion) to 100 (complete self-motion); this was followed by a blank period of 5 seconds to help reduce any residual effects of adaptation. Each participant completed 8 trials of each stimulus type (expanding or contracting), and these were blocked and counterbalanced between participants to avoid order effects. 
+
+During the initial quiet stance conditions, the room was brightly lit to ensure ample visual cues for postural control, but the screen remained blank. 
+ 
+ During the vection conditions, the room was darkened and external sources of light were minimised by turning off the external monitor, all other lighting sources, and, during seated conditions, covering the participant's head with a black cloth draped around the viewing tube.
+ 
+ At the end of the experiment, participants filled out the last section of Kennedy's Simulator Sickness Questionnaire, to give a post-experiment measure of motion sickness. 
+% Do NOT remove this, even if you are not including acknowledgments
+
+\end{linenumbers}
+\section*{Acknowledgments}
+This research was funded by Australian Research Council grant no. DP0772398  to A/Prof Palmisano. We would also like to thank Emeritus Professor Robert Gregson for his helpful discussions on non-linear dynamics and chaos theory. 
+
+%\section*{References}
+% The bibtex filename
+\newpage
+\bibliography{sway2}
+\newpage
+\section*{Figure Legends}
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width= .8 \columnwidth]{Figures/ab_Together_Balance.eps}
+\end{center}
+\caption{{\bf Quiet stance sway path for a single representative subject.} The figure shows sway with eyes open (red) and eyes closed (blue) over a 60 second period. It should be pointed out that, according to traditional conventions, negative y values represent forwards postural sway.}
+\label{Figure_1}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[Eyes open] {\label{Eyes open}\includegraphics[width=.5\textwidth]{Figures/ab_Ellipse_open.eps}}
+\subfloat[Eyes closed]{\label{Eyes closed}\includegraphics[width=.5\textwidth]{Figures/ab_Ellipse_closed.eps}}
+\end{center}
+\caption{{\bf Ellipse fits for eyes open compared to eyes closed conditions for the same representative subject.} The figure shows sway with eyes open (red) and eyes closed (blue) over a 60 second period. The area ratio was calculated as the ratio of eyes-open to eyes-closed ellipse areas. Code for these calculations can be found at [ref].}
+\label{Ellipses}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width= .9 \columnwidth]{Figures/Expanding_Contracting_SeatedVection_AreaRatio.png}
+\end{center}
+\caption{{\bf Correlations between vection measures and sway area ratios.} Top: verbal ratings. Middle: Throttle maximum values. Bottom: Latency. Vection for expanding stimuli is plotted on the right, and for contracting on the left.}
+\label{Area_Ratios}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width= .9 \columnwidth]{Figures/VEPRs_Expanding_Contracting.png}
+\end{center}
+\caption{{\bf Correlations between vection measures and visually-evoked postural responses.} The VEPR was measured as the mean position difference (forward or backward) between a period of optic flow (expanding or contracting) and the preceding period. Top: verbal ratings. Middle: Throttle maximum values. Bottom: Latency. Vection for expanding stimuli is plotted on the right, and for contracting on the left.}
+\label{VEPRs}
+\end{figure}
+
+% These also point to rather complicated (non-linear) relationships between sway magnitudes and vection.  So clearly further non-linear analysis of the sway during flow exposure is warranted ...
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[Lorenz system] {\label{Eyes open}\includegraphics[width=.5\textwidth]{Figures/Lorenz_system.eps}}
+\subfloat[RQA of Lorenz system]{\label{Eyes closed}\includegraphics[width=.5\textwidth]{Figures/Lorenz_rp.eps}}
+\end{center}
+\caption{{\bf An illustration of the concept of recurrence plots, using the Lorenz system (a well-known non-linear system - reproduced here from \cite{Schinkel:2009ex})} A. A segment of the Lorenz system represented in phase space. If a particular point falls within the given region (grey circle) of a given point at \textit{i}, it is considered a recurrence point, and is marked with a black point in the recurrence plot (B) at the location \textit{i,j}. If it falls outside that region, it is marked as a white point. Code for reproducing these figures can be found at \href{http://people.physik.hu-berlin.de/~schinkel/timely/html/index.html}{http://people.physik.hu-berlin.de/~schinkel/timely/html/index.html}}
+\label{RP_illustration}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width= .9 \columnwidth]{Figures/RQA_Example_Plots.png}
+\end{center}
+\caption{{\bf Representative recurrence plots for eyes-open and eyes-closed conditions for two individuals.} a) Eyes-open for an individual who experienced strong vection. b) Eyes-closed for the same individual c) Eyes-open for an individual who experienced weak vection d) Eyes-closed for the same individual.}
+\label{RQA_Plots}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width= .9 \columnwidth]{Figures/RQA_Correlations.png}
+\end{center}
+\caption{{\bf Correlations between vection measures and the \textit{difference} between \% recurrence for the quiet-stance eyes open and eyes closed, as measured by RQA.} The percentage of recurrence was measured using the recurrence quantification Maltab toolbox, downloaded from \href{http:/nuweb.neu.edu/cjhasson}{http:/nuweb.neu.edu/cjhasson}. This means that individuals who experienced stronger vection showed a greater percentage of recurrences with eyes closed than with eyes open, while the reverse was true for those who experienced weaker vection.}
+\label{Recurrence_Correlations}
+\end{figure}
+
+%\begin{figure}[!ht]
+%\begin{center}
+%\subfloat[S1] {\label{Eyes open}\includegraphics[width=.7\textwidth]{ab_TS_DuringVectionSway_RP_Contracting_Trial1.eps}}
+%
+%\subfloat[S2]{\label{Eyes closed}\includegraphics[width=.7\textwidth]{ac_TS_DuringVectionSway_RP_Contracting_Trial2.eps}}
+%\end{center}
+%\caption{{\bf Recurrence plots for the same subjects as shown above, but for the transition periods between fixation and optic flow while standing.} The figure shows recurrence plots for a single trial for each subject - the centre of the data marks the onset of the optic flow stimulus (contracting in this case). The subject on the left reported strong vection, while the subject on the right reported weaker vection. Note the marked clear patch in the middle of the plot (corresponding to optic flow onset) for Subject 1. This may represent a state change, from no vection to vection; this will be explored further in the next Figure.}
+%\label{RPs_Contracting}
+%\end{figure}
+%
+%\begin{figure}[!ht]
+%\begin{center}
+%\subfloat[S1] {\label{Eyes open}\includegraphics[width=.65\textwidth]{ab_DetOverRec_DuringVectionSway_Transitions_Expanding.eps}}
+%
+%\subfloat[S2]{\label{Eyes closed}\includegraphics[width=.65\textwidth]{ac_DetOverRec_DuringVectionSway_Transitions_Expanding.eps}}
+%\end{center}
+%\caption{{\bf Transition periods between fixation and optic flow for all three trials, quantified with a sliding window, showing percent determinism divided by recurrence rate. } The upper three plots show an individual who experienced strong vection, while the lower charts show a person whose vection was weak.}
+%\label{RPs_Expanding}
+%\end{figure}
+
+
+% I am assume this RQA stuff was done on the quiet stance data?  We can predict everything significantly based on this which is good?
+% What about the postural sway during the vection?  What does RQA analysis of this real time sway data show?  Does it also significantly predict the vection?
+
+% DMA: I haven't done this analysis yet. I think it would be better to use it to look at standing vection, but I'll most likely want a sliding window sort of analysis and I haven't worked out how to do that yet. Should I? I think it might make the paper a bit long. 
+
+
+%\begin{figure}[!ht]
+%\begin{center}
+%%\includegraphics[width=4in]{figure_name.2.eps}
+%\end{center}
+%\caption{
+%{\bf Bold the first sentence.}  Rest of figure 2  caption.  Caption 
+%should be left justified, as specified by the options to the caption 
+%package.
+%}
+%\label{Figure_label}
+%\end{figure}
+
+\newpage
+\section*{Tables}
+
+\begin{table}[!ht]
+\caption{
+\bf{Means and standard deviations for seated vection}}
+\begin{tabular}{|c|c|c|}
+{\bf Measure} & {\bf Expanding} & {\bf Contracting}  \\ 
+Verbal (\%) & 37.6 (21) & 60.62 (27)   \\
+Throttle max (\%) &  33.24 (22)  & 42.44 (31)  \\
+Latency (s) & 4.08 (2.4) & 3.78 (1.9)  \\
+\end{tabular}
+\begin{flushleft} Means and standard deviations (in brackets) for the verbal, throttle maximum, and latency measures for expanding and contracting seated vection.  
+\end{flushleft}
+\label{Table_0}
+ \end{table}
+
+\begin{table}[!ht]
+\caption{
+\bf{Correlations between VEPRs and vection}}
+\begin{tabular}{|c|c|c|}
+{\bf Measure} & {\bf Expanding} & {\bf Contracting}  \\ 
+Verbal (\%) & .62 (.02) & -.45 (.12)   \\
+Throttle max (\%) &  .78 (.002)  & -.41 (.16)  \\
+Latency (s) & -.37 (.23) & .61(.04)  \\
+\end{tabular}
+\begin{flushleft} Pearson correlations (\emph{r}) and p-values (in brackets) for the relationships between visually-evoked postural responses to expanding or contracting optic flow patterns and subsequently experienced seated vection. 
+\end{flushleft}
+\label{Table_1}
+ \end{table}
+ 
+ \begin{table}[!ht]
+\caption{
+\bf{Correlations between percent recurrence (RQA) and vection}}
+\begin{tabular}{|c|c|c|c|}
+{\bf Measure} & {\bf Eyes open - eyes closed} & {\bf Eyes open}  & {\bf Eyes closed}\\ 
+Verbal expanding (\%) & -0.70 (.008) &  -0.74 (.004) & 0.20 (.5) \\
+Throttle max expanding (\%) &  -0.61 (.026)  & -.72 (.005) & .08 (.79)\\
+Verbal contracting (\%) & -0.63 (.02) &  -0.62 (.02) & 0.25 (.41) \\
+Throttle max contracting (\%) &  -0.62 (.02)  & -.59 (.04) & .28 (.35)\\
+
+\end{tabular}
+\begin{flushleft} Pearson correlations (\emph{r}) and p-values (in brackets) for the relationships between the chosen RQA measure (percentage of recurrences) for eyes-open compared to eyes-closed, eyes-open only and eyes-closed only data, with verbal and throttle measures for expanding or contracting seated vection ratings. 
+\end{flushleft}
+\label{Table_2}
+ \end{table}
+ 
+
+\end{document}
+
